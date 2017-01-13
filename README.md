@@ -1,5 +1,5 @@
 
-# Building a 64bit Linux kernel for Raspberry Pi 3 the Docker Way
+# Build a Linux kernel for Raspberry Pi 3 in 64bit
 
 
 ## Prerequisites
