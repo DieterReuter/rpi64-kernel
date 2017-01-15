@@ -1,0 +1,21 @@
+sudo: required
+services:
+  - docker
+language: bash
+script:
+  - docker-compose build
+  - VERSION=${TRAVIS_TAG} docker-compose run builder
+branches:
+  only:
+    - master
+    - /^v\d.*$/
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: XXX
+  file:
+    - builds/${TRAVIS_TAG}/*
+  on:
+    tags: true
+    repo: dieterreuter/rpi64-kernel
