@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+set -x
 
 # This script is meant to run on Travis-CI only
 if [ -z "$TRAVIS_BRANCH" ]; then 
@@ -9,6 +10,7 @@ fi
 
 # create a build number
 export BUILD_NR="$(date '+%Y%m%d-%H%M%S')"
+echo "BUILD_NR=$BUILD_NR"
 
 # run build
 docker-compose build
