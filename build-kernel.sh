@@ -36,7 +36,7 @@ KR=$($MAKE kernelrelease | grep "^4")
 echo "Kernel release= $KR"
 
 # Copy kernel config for later reference
-cp .config $BUILD_DEST/config-$KR
+cp .config $BUILD_DEST/$KR.config
 
 # Build the kernel and modules
 $MAKE
