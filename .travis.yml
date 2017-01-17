@@ -3,19 +3,11 @@ services:
   - docker
 language: bash
 script:
-  - docker-compose build
-  - VERSION=${TRAVIS_TAG} docker-compose run builder
+  - ./travis-build.sh
+after_success:
+  - ls -al builds/$BUILD_NR/*
 branches:
   only:
     - master
+  except:
     - /^v\d.*$/
-deploy:
-  provider: releases
-  skip_cleanup: true
-  api_key:
-    secure: XXX
-  file:
-    - builds/${TRAVIS_TAG}/*
-  on:
-    tags: true
-    repo: dieterreuter/rpi64-kernel
