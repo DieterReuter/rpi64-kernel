@@ -7,6 +7,11 @@ if [ -z "$TRAVIS_BRANCH" ]; then
   echo "ABORTING: this script runs on Travis-CI only"
   exit
 fi
+# Check essential envs
+if [ -z "$GITHUB_TOKEN" ]; then
+  echo "ABORTING: env GITHUB_TOKEN is missing"
+  exit
+fi
 
 # create a build number
 export BUILD_NR="$(date '+%Y%m%d-%H%M%S')"
