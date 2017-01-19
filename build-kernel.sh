@@ -21,6 +21,12 @@ else
   cd $LINUX
 fi
 
+# Accept custom defconfig
+DEFCONFIG=${DEFCONFIG:="bcmrpi3_defconfig"}
+if [ "x$DEFCONFIG" != "xbcmrpi3_defconfig" ]; then
+  cp /defconfigs/$DEFCONFIG ./arch/arm64/configs/
+fi
+
 # Compile Linux kernel
 MAKE="make -j 8 ARCH=arm64 CROSS_COMPILE=$CROSS_COMPILE"
 
@@ -29,7 +35,7 @@ sed -i 's/^EXTRAVERSION =.*/EXTRAVERSION = -bee42/g' Makefile
 export LOCALVERSION="" # suppress '+' sign in 4.9.2+
 
 # Configure the kernel
-$MAKE bcmrpi3_defconfig
+$MAKE $DEFCONFIG
 
 # Get exact kernel version string
 KR=$($MAKE kernelrelease | grep "^4")

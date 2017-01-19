@@ -4,5 +4,6 @@ services:
     build: .
     environment:
     - BUILD_NR
+    - DEFCONFIG
     volumes:
     - ./builds:/builds

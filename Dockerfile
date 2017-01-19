@@ -15,5 +15,6 @@ ENV CROSS_COMPILE=/opt/linaro/gcc-linaro-6.2.1-2016.11-x86_64_aarch64-linux-gnu/
 # Get the Linux kernel 4.9 source
 RUN git clone --single-branch --branch rpi-4.9.y --depth 1 https://www.github.com/raspberrypi/linux $LINUX
 
+COPY defconfigs/ /defconfigs/
 COPY build-kernel.sh /
 CMD ["/build-kernel.sh"]
