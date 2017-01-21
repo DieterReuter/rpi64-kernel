@@ -30,10 +30,13 @@ That's all !!!
 ## Build results
 The build artifacts can be found on a local directory `./builds`.
 ```
-$ ls -al ./builds/20170113-171000/
--rw-r--r--   1 dieter  staff  18134989 Jan 13 18:36 4.9.2-bee42-v8.tar.bz2
-drwxr-xr-x   5 dieter  staff       170 Jan 13 18:36 boot
--rw-r--r--   1 dieter  staff    140067 Jan 13 18:10 config-4.9.2-bee42-v8
+ls -al ./builds/20170121-114222/
+total 52624
+-rw-r--r--   1 dieter  staff    140189 Jan 21 12:42 4.9.4-bee42-v8.config
+-rw-r--r--   1 dieter  staff  21790694 Jan 21 12:53 4.9.4-bee42-v8.tar.gz
+-rw-r--r--   1 dieter  staff        88 Jan 21 12:53 4.9.4-bee42-v8.tar.gz.sha256
+-rw-r--r--   1 dieter  staff   5000051 Jan 21 12:53 bootfiles.tar.gz
+-rw-r--r--   1 dieter  staff        83 Jan 21 12:53 bootfiles.tar.gz.sha256
 ```
 
 
