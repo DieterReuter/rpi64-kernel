@@ -30,7 +30,7 @@ That's all !!!
 ## Build results
 The build artifacts can be found on a local directory `./builds`.
 ```
-ls -al ./builds/20170121-114222/
+$ ls -al ./builds/20170121-114222/
 total 52624
 -rw-r--r--   1 dieter  staff    140189 Jan 21 12:42 4.9.4-bee42-v8.config
 -rw-r--r--   1 dieter  staff  21790694 Jan 21 12:53 4.9.4-bee42-v8.tar.gz

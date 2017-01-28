@@ -10,7 +10,7 @@ mkdir -p $BUILD_DEST
 
 # Get the Linux kernel 4.9 source
 BRANCH=rpi-4.9.y
-if [[ -d $LINUX ]]; then
+if [ -d $LINUX ]; then
   # update kernel repo
   cd $LINUX
   git pull
@@ -84,4 +84,3 @@ cp $TARFILE2* $BUILD_DEST/
 
 # List build artefacts
 ls -al $BUILD_DEST/
-
