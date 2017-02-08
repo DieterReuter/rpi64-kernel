@@ -4,7 +4,7 @@
 
 
 ## Prerequisites
-In order to build the LK 4.9 for the Raspberry Pi 3 board you only need a few tools on your Mac:
+In order to build the LK 4.9.8 for the Raspberry Pi 3 board you only need a few tools on your Mac:
 
 1. git
 2. [Docker for Mac](https://docs.docker.com/docker-for-mac/)
