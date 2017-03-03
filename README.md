@@ -1,6 +1,6 @@
 
 # Build a Linux kernel for Raspberry Pi 3 in 64bit
-[![Build Status](https://travis-ci.com/DieterReuter/rpi64-kernel.svg?token=ExPqNxiRaVAPsjieDH9T&branch=master)](https://travis-ci.com/DieterReuter/rpi64-kernel)
+[![Build Status](https://travis-ci.org/DieterReuter/rpi64-kernel.svg?branch=master)](https://travis-ci.org/DieterReuter/rpi64-kernel)
 
 
 ## Prerequisites
