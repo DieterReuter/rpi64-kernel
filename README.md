@@ -30,17 +30,29 @@ That's all !!!
 ## Build results
 The build artifacts can be found on a local directory `./builds`.
 ```
-$ ls -al ./builds/20170121-114222/
-total 52624
--rw-r--r--   1 dieter  staff    140189 Jan 21 12:42 4.9.4-bee42-v8.config
--rw-r--r--   1 dieter  staff  21790694 Jan 21 12:53 4.9.4-bee42-v8.tar.gz
--rw-r--r--   1 dieter  staff        88 Jan 21 12:53 4.9.4-bee42-v8.tar.gz.sha256
--rw-r--r--   1 dieter  staff   5000051 Jan 21 12:53 bootfiles.tar.gz
--rw-r--r--   1 dieter  staff        83 Jan 21 12:53 bootfiles.tar.gz.sha256
+$ tree builds
+builds
+└── 20170303-152804
+    ├── 4.9.13-bee42-v8.config
+    ├── 4.9.13-bee42-v8.tar.gz
+    ├── 4.9.13-bee42-v8.tar.gz.sha256
+    ├── bootfiles.tar.gz
+    └── bootfiles.tar.gz.sha256
+
+1 directory, 5 files
+```
+
+```
+$ ls -al ./builds/20170303-152804/
+-rw-r--r--  1 dieter  staff    140641 Mar  3 16:28 4.9.13-bee42-v8.config
+-rw-r--r--  1 dieter  staff  21863866 Mar  3 16:40 4.9.13-bee42-v8.tar.gz
+-rw-r--r--  1 dieter  staff        89 Mar  3 16:40 4.9.13-bee42-v8.tar.gz.sha256
+-rw-r--r--  1 dieter  staff   5092332 Mar  3 16:40 bootfiles.tar.gz
+-rw-r--r--  1 dieter  staff        83 Mar  3 16:40 bootfiles.tar.gz.sha256
 ```
 
 
 ---
 The MIT License (MIT)
 
-Copyright (c) 2016 Dieter Reuter
+Copyright (c) 2017 Dieter Reuter
