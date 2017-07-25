@@ -9,20 +9,14 @@ BUILD_DEST=/builds/$BUILD_NR
 mkdir -p $BUILD_DEST
 
 # Get the Linux kernel 4.9 source
-BRANCH=rpi-4.9.y
 if [ -d $LINUX ]; then
-  # update kernel repo
   cd $LINUX
-  git pull
-  git checkout $BRANCH
 else
-  # clone kernel repo
-  git clone --single-branch --branch $BRANCH --depth 1 https://www.github.com/raspberrypi/linux $LINUX
-  cd $LINUX
+  exit
 fi
 
 # Accept custom defconfig
-DEFCONFIG=${DEFCONFIG:="bcmrpi3_defconfig"}
+DEFCONFIG=${DEFCONFIG:="docker_rpi3_defconfig"}
 if [ "x$DEFCONFIG" != "xbcmrpi3_defconfig" ]; then
   cp /defconfigs/$DEFCONFIG ./arch/arm64/configs/
 fi
@@ -63,8 +57,8 @@ depmod -a -b $INSTALLDIR $KR
 # Install kernel, dtb and overlays
 mkdir -p $INSTALLDIR/boot/overlays
 cp arch/arm64/boot/Image $INSTALLDIR/boot/kernel8.img
-cp arch/arm64/boot/dts/broadcom/bcm2710-rpi-3-b.dtb $INSTALLDIR/boot/
-cp arch/arm64/boot/dts/overlays/*.dtbo $INSTALLDIR/boot/overlays/
+cp arch/arm64/boot/dts/broadcom/bcm2837-rpi-3-b.dtb $INSTALLDIR/boot/
+###cp arch/arm64/boot/dts/overlays/*.dtbo $INSTALLDIR/boot/overlays/
 
 # Create tar file, all kernel files
 TARFILE1=$KR.tar.gz
