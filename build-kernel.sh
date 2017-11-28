@@ -31,7 +31,7 @@ fi
 MAKE="make -j 8 ARCH=arm64 CROSS_COMPILE=$CROSS_COMPILE"
 
 # Add kernel branding for HypriotOS
-sed -i 's/^EXTRAVERSION =.*/EXTRAVERSION = -bee42/g' Makefile
+sed -i 's/^EXTRAVERSION =.*/EXTRAVERSION = -hypriotos/g' Makefile
 export LOCALVERSION="" # suppress '+' sign in 4.9.2+
 
 # Configure the kernel
