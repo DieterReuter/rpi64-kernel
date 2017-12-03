@@ -2,6 +2,10 @@
 # Build a Linux kernel for Raspberry Pi 3 in 64bit
 [![Build Status](https://travis-ci.org/DieterReuter/rpi64-kernel.svg?branch=master)](https://travis-ci.org/DieterReuter/rpi64-kernel)
 
+This repo just builds a Linux kernel for Raspberry Pi 3 in 64bit. It uses the linux kernel provided by the upstream repo at https://github.com/raspberrypi/linux.
+
+Latest LTS Linux Kernel now is 4.9.66.
+
 
 ## Prerequisites
 In order to build the latest Linux kernel 4.9.x for the Raspberry Pi 3 board you only need a few tools on your Mac:
