@@ -4,7 +4,7 @@
 
 This repo just builds a Linux kernel for Raspberry Pi 3 in 64bit. It uses the linux kernel provided by the upstream repo at https://github.com/raspberrypi/linux.
 
-Latest LTS Linux Kernel now is 4.9.76.
+Latest LTS Linux Kernel now is 4.9.80.
 
 
 ## Prerequisites
