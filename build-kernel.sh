@@ -9,15 +9,27 @@ BUILD_DEST=/builds/$BUILD_NR
 mkdir -p $BUILD_DEST
 
 # Get the Linux kernel 4.9 source
-BRANCH=rpi-4.9.y
+if [[ -z "$RPI_KERNEL_BRANCH" ]]; then
+  RPI_KERNEL_BRANCH=rpi-4.9.y
+fi
+
 if [ -d $LINUX ]; then
   # update kernel repo
   cd $LINUX
-  git pull
-  git checkout $BRANCH
+  CURRENT_BRANCH=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+  if [ "$CURRENT_BRANCH" == "$RPI_KERNEL_BRANCH" ]; then
+      git pull
+      git checkout $RPI_KERNEL_BRANCH
+  else
+      cd ..
+      rm -rf $LINUX
+      mkdir -p $LINUX
+      git clone --single-branch --branch $RPI_KERNEL_BRANCH --depth 1 https://www.github.com/raspberrypi/linux $LINUX
+      cd $LINUX
+  fi
 else
   # clone kernel repo
-  git clone --single-branch --branch $BRANCH --depth 1 https://www.github.com/raspberrypi/linux $LINUX
+  git clone --single-branch --branch $RPI_KERNEL_BRANCH --depth 1 https://www.github.com/raspberrypi/linux $LINUX
   cd $LINUX
 fi
 
