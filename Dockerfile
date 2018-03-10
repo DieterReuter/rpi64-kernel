@@ -19,5 +19,5 @@ ENV CROSS_COMPILE=/opt/linaro/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/
 RUN git clone --single-branch --branch $RPI_KERNEL_BRANCH --depth 1 $RPI_KERNEL_REPO $LINUX
 
 COPY defconfigs/ /defconfigs/
-COPY build-kernel.sh /
+COPY build-kernel.sh get-kernel-version.sh refresh-repo.sh /
 CMD ["/build-kernel.sh"]
