@@ -5,6 +5,5 @@ services:
     environment:
     - BUILD_NR
     - DEFCONFIG
-    - RPI_KERNEL_BRANCH
     volumes:
     - ./builds:/builds
