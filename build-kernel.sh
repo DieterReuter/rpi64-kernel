@@ -58,8 +58,7 @@ depmod -a -b $INSTALLDIR $KR
 mkdir -p $INSTALLDIR/boot/overlays
 cp arch/arm64/boot/Image $INSTALLDIR/boot/kernel8.img
 cp arch/arm64/boot/dts/broadcom/bcm2710-rpi-3-b.dtb $INSTALLDIR/boot/
-cp arch/arm64/boot/dts/broadcom/bcm2710-rpi-3-b-plus.dts $INSTALLDIR/boot/
-cp arch/arm64/boot/dts/broadcom/bcm283x-rpi-lan7515.dtsi $INSTALLDIR/boot/
+cp arch/arm64/boot/dts/broadcom/bcm2710-rpi-3-b-plus.dtb $INSTALLDIR/boot/
 cp arch/arm64/boot/dts/overlays/*.dtbo $INSTALLDIR/boot/overlays/
 
 # Create tar file, all kernel files
