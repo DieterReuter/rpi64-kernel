@@ -22,7 +22,7 @@ if [ "x$DEFCONFIG" != "xbcmrpi3_defconfig" ]; then
 fi
 
 # Compile Linux kernel
-MAKE="make -j 8 ARCH=arm64 CROSS_COMPILE=$CROSS_COMPILE"
+MAKE="make -j4 ARCH=arm64 CROSS_COMPILE=$CROSS_COMPILE"
 
 # Add kernel branding for HypriotOS
 sed -i 's/^EXTRAVERSION =.*/EXTRAVERSION = -hypriotos/g' Makefile
