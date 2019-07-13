@@ -4,11 +4,11 @@
 
 This repo just builds a Linux kernel for Raspberry Pi 3 in 64bit. It uses the linux kernel provided by the upstream repo at https://github.com/raspberrypi/linux.
 
-Latest LTS Linux Kernel now is 4.9.80.
+Latest LTS Linux Kernel now is 4.19.58.
 
 
 ## Prerequisites
-In order to build the latest Linux kernel 4.9.x for the Raspberry Pi 3 board you only need a few tools on your Mac:
+In order to build the latest Linux kernel 4.19.x for the Raspberry Pi 3 board you only need a few tools on your Mac:
 
 1. git
 2. [Docker for Mac](https://docs.docker.com/docker-for-mac/)
@@ -59,4 +59,4 @@ $ ls -al ./builds/20170303-152804/
 ---
 The MIT License (MIT)
 
-Copyright (c) 2017 Dieter Reuter
+Copyright (c) 2017-2019 Dieter Reuter
