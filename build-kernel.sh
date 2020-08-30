@@ -32,7 +32,7 @@ export LOCALVERSION="" # suppress '+' sign in 4.9.2+
 $MAKE $DEFCONFIG
 
 # Get exact kernel version string
-KR=$($MAKE kernelrelease | grep "^4")
+KR=$($MAKE kernelrelease | grep "^5")
 echo "Kernel release= $KR"
 
 # Copy kernel config for later reference
